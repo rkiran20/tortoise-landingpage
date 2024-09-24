@@ -26,7 +26,7 @@ const Testimonials = () => {
         <div
           className="flex overflow-hidden mx-1 transition-transform duration-300 ease-in-out "
           style={{
-            transform: `translateX(calc(-${index}*345px))`,
+            transform: `translateX(calc(-${index}*358px))`,
             width: `${testimonialsData.length * 100}%`,
           }}
         >

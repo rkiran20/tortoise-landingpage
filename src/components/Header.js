@@ -50,7 +50,7 @@ const Header = () => {
             className="flex h-16 items-center cursor-pointer block lg:hidden"
             onClick={handleMenu}
           >
-            <FontAwesomeIcon icon={faBars} className="h-6" />
+            <FontAwesomeIcon icon={faBars} className="h-6 dark:text-greyy" />
           </div>
           <ul className="flex flex-row items-center cursor-pointer hidden lg:flex gap-8 ">
             <li className="hover:text-brown transition-colors duration-300 hover:underline hover:decoration-brown dark:text-greyy dark:hover:text-green-500 underline-offset-4 ">
