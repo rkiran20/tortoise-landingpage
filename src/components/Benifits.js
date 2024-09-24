@@ -1,56 +1,57 @@
 import React from "react";
 import { benefitsData } from "../Data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { easeIn } from "framer-motion";
+import { motion } from "framer-motion";
+import useScroll from "./useScroll";
+import BenefitsCard from "./BenefitsCard";
 
 const Benifits = () => {
+  const [element1, controls1] = useScroll();
+  const [element2, controls2] = useScroll();
+  const [element3, controls3] = useScroll();
+  const scrollReveal = {
+    hidden: { opacity: 0, transition: { duration: 1, easeIn } },
+    visible: { opacity: 1, transition: { duration: 1, easeIn } },
+  };
+
   return (
-    <div className="mb-4 mt-8 px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
-      <div className="flex flex-col justify-center items-center py-4 gap-5">
-        <p className="font-bold xs:text-base md:text-lg">
+    <div className="mb-4 mt-24 px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 ">
+      <div className="flex flex-col justify-center items-center py-4 gap-5 ">
+        <motion.p
+          className="font-bold xs:text-base md:text-lg dark:text-greyy"
+          variants={scrollReveal}
+          ref={element1}
+          initial="hidden"
+          animate={controls1}
+        >
           DO MORE WITH TORTOISE
-        </p>
-        <h1 className="font-bold text-2xl xs:text-large-font md:text-larger-font text-center">
+        </motion.p>
+        <motion.h1
+          variants={scrollReveal}
+          initial="hidden"
+          animate={controls2}
+          ref={element2}
+          className="font-bold dark:text-greyy text-2xl xs:text-large-font md:text-larger-font text-center"
+        >
           All-in-one benefit management{" "}
-          <span className="inline-block text-green-700 text-2xl xs:text-large-font md:text-larger-font">
+          <motion.span className="inline-block dark:text-lightGreen text-green-700 text-2xl xs:text-large-font md:text-larger-font">
             service
-          </span>
-        </h1>
-        <p className="flex text-center font-bold xs:text-base md:text-lg">
+          </motion.span>
+        </motion.h1>
+        <motion.p
+          variants={scrollReveal}
+          initial="hidden"
+          animate={controls3}
+          ref={element3}
+          className="flex text-center dark:text-lightGrey font-bold xs:text-base md:text-lg"
+        >
           Unlock access to a range of top-tier benefits that help attract and
           retain talent with all the tools and integrations necessary.
-        </p>
+        </motion.p>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
-        {benefitsData.map((data) => (
-          <div
-            key={data.id}
-            className="mx-4 px-4 rounded-3xl py-4 shadow-softGray bg-lightBrown flex flex-col gap-4 max-w-[480px]"
-          >
-            <div className="flex gap-4">
-              <img
-                src={data.headerLogo}
-                alt="logo"
-                className="rounded-[50%] overflow-hidden"
-              ></img>{" "}
-              <div className="font-bold text-[1.3rem] flex items-center ">
-                {data.heading}{" "}
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <p className="flex ">{data.bodyParagraph}</p>
-              <ul className="flex flex-col ">
-                {data.paraPoints.map((points, index) => (
-                  <li key={index} className="flex gap-4 items-center py-1 ">
-                    <FontAwesomeIcon
-                      icon={points.icon}
-                      className="text-green-400"
-                    />
-                    <p>{points.paragraph}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      <div className="flex flex-wrap justify-center gap-4 py-4 overflow-hidden">
+        {benefitsData.map((data, index) => (
+          <BenefitsCard key={index} data={data} index={index} />
         ))}
       </div>
     </div>

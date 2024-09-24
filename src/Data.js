@@ -20,7 +20,31 @@ import {
   faTableColumns,
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFile } from "@fortawesome/free-solid-svg-icons/faFile";
+import useScroll from "./components/useScroll";
+
+export const myClientsData = [
+  {
+    id: "1",
+    imageUrl:
+      "https://www.tortoise.pro/images/image-removebg-preview-14-p-500.png",
+  },
+  {
+    id: "2",
+    imageUrl: "https://www.tortoise.pro/images/wishlinklogo-1-1.png",
+  },
+  {
+    id: "3",
+    imageUrl: "https://www.tortoise.pro/images/image-88-p-500.png",
+  },
+  {
+    id: "4",
+    imageUrl: "https://www.tortoise.pro/images/winth.png",
+  },
+  // {
+  //   id: "5",
+  //   imageUrl: "https://www.tortoise.pro/images/image-removebg-preview-28.png",
+  // },
+];
 
 export const impactData = [
   {
@@ -45,6 +69,7 @@ export const benefitsData = [
     id: 1,
     headerLogo: "https://www.tortoise.pro/images/icon01.svg",
     heading: "Device Procurement",
+
     bodyParagraph:
       "Browse through our extensive catalogue of devices to purchase, activate and enjoy benefits up to 30%, and 0 cost EMIs.",
     paraPoints: [

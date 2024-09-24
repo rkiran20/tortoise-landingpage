@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       screens: {
@@ -13,6 +14,16 @@ module.exports = {
       colors: {
         softBeige: "#faf4ea",
         lightBrown: "#f3f2f0",
+        brown: "#41341a",
+        lightBlue: "#b4e2ee",
+        lightGrey: "#9CA3AF", // secondary text
+        variedGreen: "#15803d", //btn
+        lightBeige: "#FAF4EA", // hover btn background
+        greyy: "#F9FAFB", // primary text
+        mainBlack: "#1F2937", // background
+        lightGreen: "#22C55E",
+        darkGrey: "#37474F",
+        greyyishBlue: "#2C3E50",
       },
       boxShadow: {
         softGray: "0 4px 18px rgba(0, 0, 0, 0.1)",
