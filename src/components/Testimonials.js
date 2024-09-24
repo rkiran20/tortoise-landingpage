@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <div className="overflow-hidden px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
       <h1 className="font-bold text-2xl dark:text-greyy xs:text-large-font md:text-larger-font text-center pb-4 md:pb-8 lg:pb-12 xl:pb-12 ">
-        TESTIMONOALS
+        TESTIMONIALS
       </h1>
       <div className="overflow-hidden">
         <div
@@ -38,7 +38,7 @@ const Testimonials = () => {
       <div className="flex justify-between px-8">
         <div
           onClick={handleLeftBtn}
-          className="bg-white dark:bg-darkGrey w-12 h-12 rounded-[50%] flex items-center justify-center"
+          className="bg-white dark:bg-darkGrey cursor-pointer w-12 h-12 rounded-[50%] flex items-center justify-center"
         >
           {" "}
           <FontAwesomeIcon
@@ -48,7 +48,7 @@ const Testimonials = () => {
         </div>
         <div
           onClick={handleRightBtn}
-          className="bg-white dark:bg-darkGrey w-12 h-12 rounded-[50%] flex items-center justify-center"
+          className="bg-white cursor-pointer dark:bg-darkGrey w-12 h-12 rounded-[50%] flex items-center justify-center"
         >
           {" "}
           <FontAwesomeIcon

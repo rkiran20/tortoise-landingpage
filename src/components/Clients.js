@@ -3,7 +3,7 @@ import { myClientsData } from "../Data";
 
 const Clients = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between mx-4  px-4 py-4 sm:py-4 md:py-12 my-12 rounded-3xl  sm:mx-6 gap-1 xs:gap-4 bg-green-700 lg:mx-12 xl:mx-16 2xl:mx-24">
+    <div className="flex flex-col md:flex-row items-center justify-evenly mx-4  px-4 py-4 sm:py-4 md:py-12 my-12 rounded-3xl  sm:mx-6 gap-1 xs:gap-4 bg-green-700 lg:mx-12 xl:mx-16 2xl:mx-24">
       <div>
         <h1 className="text-white font-bold px-8 text-2xl dark:text-greyy ">
           Our Clients
