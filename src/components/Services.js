@@ -64,7 +64,7 @@ const Services = () => {
           ))}
         </ul>
       </motion.div>
-      <div className="relative overflw-hidden w-100% flex-3">
+      <div className="relative overflow-hidden w-100% flex-3">
         <img
           src="https://www.tortoise.pro/images/Group-42917-p-500.png"
           alt="work-logo"

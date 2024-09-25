@@ -35,7 +35,7 @@ const Overview = () => {
   const animationVariant = isMobile ? none : leftToRight;
   return (
     <div className="p-4 my-8 px-4 sm:px-6 overflow-hidden lg:px-12 xl:px-16 2xl:px-24 flex flex-col md:flex-row gap-4 ">
-      <div className="flex-3 relative z-[1]">
+      <div className="flex-3 relative z-[1] overflow-hidden">
         <img
           src="https://www.tortoise.pro/images/Group-42919.png"
           alt="logo"
