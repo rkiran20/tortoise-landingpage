@@ -10,7 +10,11 @@ const GetStarted = () => {
   };
   const fadeVariant = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 2, easeOut } },
+    visible: { opacity: 1, transition: { duration: 1, easeOut } },
+  };
+  const btnVariant = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1, easeOut, delay: 2 } },
   };
   const imgVariant = {
     hidden: { opacity: 0, x: 100 },
@@ -24,8 +28,8 @@ const GetStarted = () => {
     <motion.div
       className=" dark:bg-mainBlack  transition-colors duration-500 p-4 pt-12 sm:px-6  flex flex-col md:flex-row gap-1 bg-softBeige lg:px-12 xl:px-16 2xl:px-24  "
       initial="hidden"
-      animate={controls}
-      ref={element}
+      animate="visible"
+      //ref={element}
       variants={{
         visible: {
           transition: {
@@ -35,7 +39,7 @@ const GetStarted = () => {
         hidden: { transition: { duration: 500, easeOut } },
       }}
     >
-      <motion.div className="md:pt-4 flex-4">
+      <motion.div className="md:pt-4 md:w-[50%]">
         <motion.div className="overflow-hidden">
           <motion.h1
             className="text-2xl xs:text-large-font md:text-larger-font md:pb-4   lg:pt-12 xl:pt-24 font-bold dark:text-greyy text-black-700 py-1 "
@@ -71,39 +75,39 @@ const GetStarted = () => {
         <motion.div className="flex flex-row gap-2  my-4">
           <motion.button
             className="bg-green-700 border-2 border-transparent text-white font-bold text-lg px-6 py-3 rounded-[2rem]"
-            variants={fadeVariant}
+            variants={btnVariant}
             whileHover={{
               backgroundColor: "#faf4ea",
               color: "#15803d",
               borderColor: "#15803d",
             }}
             transition={{ duration: 0.3 }}
-            // initial="hidden"
-            // animate="visible"
+            initial="hidden"
+            animate="visible"
           >
             Get Started
           </motion.button>
           <motion.button
             className="bg-green-700 border-2 border-transparent text-white font-bold text-lg px-6 py-3 rounded-[2rem]"
-            variants={fadeVariant}
+            variants={btnVariant}
             whileHover={{
               backgroundColor: "#faf4ea",
               color: "#15803d",
               borderColor: "#15803d",
             }}
             transition={{ duration: 0.3 }}
-            // initial="hidden"
-            // animate="visible"
+            initial="hidden"
+            animate="visible"
           >
             Listen Demo
           </motion.button>
         </motion.div>
       </motion.div>
-      <motion.div className="mx-auto min-w-[30vh] overflow-hidden flex-3">
+      <motion.div className="mx-auto min-w-[30vh] overflow-hidden md:w-[50%]">
         <motion.img
           src="https://www.tortoise.pro/images/Group-42920-1-p-500.png"
           alt="image"
-          className="object-cover overflow-hidden"
+          className="object-cover overflow-hidden w-[90%]"
           variants={imgVariant}
         ></motion.img>
       </motion.div>
